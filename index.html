@@ -1,111 +1,120 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Domain check</title>
+  <title>Mi Amor</title>
   <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0b0d10;
-      --card: #14181e;
-      --text: #eef2f6;
-      --muted: #9aa6b2;
-      --line: #2a323c;
-      --accent: #7dd3fc;
+      --ink: #3a2a2c;
+      --soft: #6d5558;
+      --paper: #f7efe6;
+      --blush: #e8c4c2;
+      --rose: #b76e79;
+      --gold: #c4a574;
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; min-height: 100%; }
     body {
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      color: var(--ink);
       background:
-        radial-gradient(1200px 600px at 10% -10%, #1b2838 0%, transparent 55%),
-        radial-gradient(900px 500px at 110% 10%, #1a2430 0%, transparent 50%),
-        var(--bg);
-      color: var(--text);
+        radial-gradient(900px 500px at 50% -10%, #fde8e4 0%, transparent 55%),
+        radial-gradient(700px 420px at 100% 100%, #f3e0d4 0%, transparent 50%),
+        var(--paper);
+      min-height: 100vh;
       display: grid;
       place-items: center;
-      padding: 32px 20px;
+      padding: 32px 18px;
     }
     main {
-      width: min(560px, 100%);
-      background: color-mix(in srgb, var(--card) 88%, transparent);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 36px 32px;
-      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+      width: min(640px, 100%);
+      background: color-mix(in srgb, #fffaf6 82%, transparent);
+      border: 1px solid color-mix(in srgb, var(--blush) 70%, #fff);
+      border-radius: 28px;
+      padding: clamp(28px, 6vw, 52px);
+      box-shadow:
+        0 1px 0 rgba(255,255,255,.8) inset,
+        0 30px 80px rgba(90, 50, 55, .08);
+      text-align: center;
     }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      letter-spacing: .04em;
+    .mark {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: color-mix(in srgb, var(--blush) 55%, #fff);
+      color: var(--rose);
+      font-size: 26px;
+    }
+    p.kicker {
+      margin: 0 0 10px;
+      letter-spacing: .22em;
       text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
-      background: color-mix(in srgb, var(--accent) 10%, transparent);
-      border-radius: 999px;
-      padding: 6px 10px;
-      margin-bottom: 18px;
-    }
-    .dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: #34d399;
-      box-shadow: 0 0 0 4px rgba(52, 211, 153, .15);
+      font-size: 12px;
+      color: var(--rose);
+      font-weight: 500;
     }
     h1 {
-      font-size: clamp(28px, 5vw, 40px);
-      line-height: 1.1;
-      margin: 0 0 10px;
-      letter-spacing: -.03em;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(34px, 8vw, 56px);
+      line-height: 1.05;
+      margin: 0 0 18px;
+      letter-spacing: -.02em;
     }
-    p { margin: 0; color: var(--muted); line-height: 1.55; }
-    dl {
-      margin: 28px 0 0;
-      display: grid;
-      gap: 12px;
+    .letter {
+      text-align: left;
+      max-width: 38em;
+      margin: 0 auto;
     }
-    .row {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 12px 0;
-      border-top: 1px solid var(--line);
-      font-size: 14px;
+    .letter p {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(20px, 3.4vw, 24px);
+      line-height: 1.55;
+      color: var(--ink);
+      margin: 0 0 1.05em;
     }
-    dt { color: var(--muted); }
-    dd { margin: 0; font-variant-numeric: tabular-nums; text-align: right; word-break: break-all; }
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    .letter p.sign {
+      margin: 1.6em 0 0;
+      font-style: italic;
+      color: var(--soft);
+    }
+    .letter .name {
+      display: block;
+      margin-top: .2em;
+      font-style: normal;
+      font-size: 1.15em;
+      color: var(--ink);
+    }
+    footer {
+      margin-top: 28px;
       font-size: 13px;
+      color: var(--soft);
+      letter-spacing: .04em;
     }
+    footer span { color: var(--gold); }
   </style>
 </head>
 <body>
   <main>
-    <div class="pill"><span class="dot"></span> Live</div>
-    <h1>This domain is pointed correctly.</h1>
-    <p>If you can read this on your custom domain over HTTPS, GitHub Pages and DNS are working.</p>
-    <dl>
-      <div class="row">
-        <dt>Host</dt>
-        <dd><code id="host">—</code></dd>
-      </div>
-      <div class="row">
-        <dt>Protocol</dt>
-        <dd><code id="proto">—</code></dd>
-      </div>
-      <div class="row">
-        <dt>Loaded</dt>
-        <dd><code id="when">—</code></dd>
-      </div>
-    </dl>
+    <div class="mark" aria-hidden="true">♥</div>
+    <p class="kicker">For my loving wife</p>
+    <h1>Mi Amor</h1>
+    <div class="letter">
+      <p>Te amo muchísimo muchísimo muchísimo!
+      <p>I just wanted to write you a little note to let you know how much I love you and appreciate you and all that you do for our family.</p>
+      <p>I am proud of you and what you have accomplished. I am grateful for you. I still can't believe that I got you to make me the happiest man on the planet.</p>
+      <p class="sign">Love,<span class="name">Your Pompis Man</span></p>
+    </div>
+    <footer>endersmercy <span>♥</span> Mi Amor</footer>
   </main>
-  <script>
-    document.getElementById("host").textContent = location.host || "local";
-    document.getElementById("proto").textContent = location.protocol.replace(":", "");
-    document.getElementById("when").textContent = new Date().toISOString().replace("T", " ").slice(0, 19) + " UTC";
-  </script>
 </body>
 </html>
